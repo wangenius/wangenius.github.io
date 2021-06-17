@@ -1,0 +1,4 @@
+.shadowed {
+    box-shadow: 4px 5px 8px #e5e7e8;
+    transition: 0.2s ease-out;
+}

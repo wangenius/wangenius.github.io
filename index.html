@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet"  type="text/css" href="css/main.css">
+    <link rel="stylesheet"  type="text/css" href="css/searchingbar.css">
+    <link rel="stylesheet"  type="text/css" href="css/shadow.css">
+    <link rel="stylesheet"  type="text/css" href="css/loginbar.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/addBookmark.js"></script>
+<script type="text/javascript" src="js/signin.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/addshadow.js"></script>
+<script type="text/javascript" src="js/openandshutdown.js"></script>
+<script type="text/javascript" src="js/getcookie.js"></script>
+<body>
+<div class="Block invisible" id="BookmarkBlock">
+    <div class="closebtn" id="closebtn">CLOSE</div>
+    <label for="bookmarktype" id="bookmark"></label><input type="text" id="bookmarktype" class="addType" name="temp" placeholder="site name">
+    <label for="linktype" id="link"></label><input type="url" id="linktype" class="addType" name="temp" placeholder="web link">
+    <div class="btn" id="bookmarkconfirm">confirm</div>
+</div>
+
+
+<div class="invisible" id="backshadow"></div>
+
+<div class="col-11" id="userbar">
+    <div class="btn userbtn" id="signinbtn">sign in</div>
+    <div class="btn userbtn" id="signupbtn">sign up</div>
+    <div class="btn userbtn invisible" id="usernameBtn"></div>
+    <div class="btn userbtn" id="momentbtn">moment</div>
+</div>
+
+<div class="col-12 height-12 blankArea"></div>
+<div class="col-12 height-12 blankArea"></div>
+<div class="col-12 height-12 blankArea"></div>
+<div class="col-12 height-12 blankArea"></div>
+<div class="col-12 height-12 blankArea"></div>
+<div class="col-12 height-12 blankArea"></div>
+
+<div class="col-8">
+    <div id="searchboard">
+        <label for="searchtype" id="searchbar"></label><input type="text" id="searchtype" name="temp" placeholder="Here for Searching">
+        <div id="searchbtn" class="btn">Search</div>
+        <div id="searchtool" class="btn invisible">searchtool</div>
+    </div>
+</div>
+
+
+
+<div class="col-12 blankArea"></div>
+
+<div class="col-8 height-4 bar vanish" id="signInBar">
+    <div id="signInKits" class="invisible">
+        <div class="closebtn" id="closesignbtn">CLOSE</div>
+        <label for="usernametype" id="username"></label><input type="text" id="usernametype" class="logtype" name="temp" placeholder="username">
+        <label for="passwordtype" id="password"></label><input type="password" id="passwordtype" class="logtype" name="temp" placeholder="password">
+        <div class="btn logbtn" id="signinconfirm">confirm</div>
+        <div class="btn logbtn" id="signup">sign up</div>
+    </div>
+</div>
+
+<div class="col-8 height-3 bar vanish" id="searchtoolarera">
+</div>
+
+<div class="col-8 height-11 bar" id="linkarea">
+    <div class="btn" id="set">set</div>
+</div>
+
+<div class="col-8 bar" id="areasecond">
+    hei
+</div>
+<div class="col-8 bar" id="areathird">
+this is empty right now
+</div>
+
+
+
+
+
+</body>
+
+</html>

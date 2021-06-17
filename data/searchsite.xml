@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<websearch>
+    <site>
+        <name>baidu</name>
+        <id>baidu</id>
+        <headurl>https://www.baidu.com/s?wd=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>google</name>
+        <id>google</id>
+        <headurl>https://www.google.com/search?hl=zh-CN&amp;q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>zhihu</name>
+        <id>zhihu</id>
+        <headurl>https://www.zhihu.com/search?type=content&amp;q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>weibo</name>
+        <id>weibo</id>
+        <headurl>https://s.weibo.com/weibo/</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>spotify</name>
+        <id>spotify</id>
+        <headurl>https://open.spotify.com/search/</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>360</name>
+        <id>360</id>
+        <headurl>https://www.so.com/s?q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>taobao</name>
+        <id>taobao</id>
+        <headurl>https://s.taobao.com/search?q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>lookao</name>
+        <id>lookao</id>
+        <headurl>https://www.lookao.com/search?q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+    <site>
+        <name>shenma</name>
+        <id>shenma</id>
+        <headurl>https://m.sm.cn/s?q=</headurl>
+        <bottomurl> </bottomurl>
+    </site>
+</websearch>
+

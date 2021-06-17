@@ -1,0 +1,36 @@
+.logbtn {
+    cursor: pointer;
+    margin: 10px 5px;
+    display: inline-block;
+}
+.logtype {
+    flex: 1;
+    display: inline-block;
+    border: 1px solid #E5E7E8;
+    margin: 10px 5px;
+    cursor: text;
+    user-select: none;
+    border-radius: 18px;
+    padding-left: 15px;
+    outline: none;
+    height: 36px;
+    background-color: white;
+}
+
+#signInKits {
+    text-align: left;
+    display: flex;
+    position:relative;
+    padding-right: 20px;
+}
+
+#signInBar {
+    overflow: hidden;
+}
+
+#closesignbtn {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    z-index: 2;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<people>
+    <indiv id="1">
+        <username>wangenius</username>
+        <password>153153</password>
+        <bookmark>
+            <website>
+                <name>baidu</name>
+                <url>https://www.baidu.com/</url>
+            </website>
+            <website>
+                <name>bilibili</name>
+                <url>https://www.bilibili.com</url>
+            </website>
+            <website>
+                <name>google</name>
+                <url>https://www.google.com</url>
+            </website>
+            <website>
+                <name>zhihu</name>
+                <url>https://www.zhihu.com</url>
+            </website>
+            <website>
+                <name>weibo</name>
+                <url>https://www.weibo.com</url>
+            </website>
+            <website>
+                <name>douyu</name>
+                <url>https://www.douyu.com</url>
+            </website>
+            <website>
+                <name>home</name>
+                <url>https://wangenius.github.io</url>
+            </website>
+        </bookmark>
+    </indiv>
+
+    <indiv id="2">
+        <username>sonyejin</username>
+        <password>143143</password>
+        <bookmark>
+            <website>
+                <name>baidu</name>
+                <url>https://www.baidu.com</url>
+            </website>
+            <website>
+                <name>bilibili</name>
+                <url>https://www.bilibili.com</url>
+            </website>
+            <website>
+                <name>google</name>
+                <url>https://www.google.com</url>
+            </website>
+            <website>
+                <name>zhihu</name>
+                <url>https://www.zhihu.com</url>
+            </website>
+
+        </bookmark>
+
+    </indiv>
+
+</people>
