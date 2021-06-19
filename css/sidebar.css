@@ -1,0 +1,8 @@
+#sideArea {
+    float: right;
+    height: 70%;
+    max-width: 16%;
+    right: 0;
+
+    position: absolute;
+}

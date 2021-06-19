@@ -21,7 +21,6 @@
     text-align: left;
     display: flex;
     position:relative;
-    padding-right: 20px;
 }
 
 #signInBar {
@@ -29,8 +28,6 @@
 }
 
 #closesignbtn {
-    position: absolute;
-    right: 0;
-    width: 20px;
-    z-index: 2;
+    margin-right: 15px;
+    width: 35px;
 }

@@ -1,5 +1,7 @@
 var SE = "https://www.baidu.com/s?wd=";
-
+var se1 = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=";
+var	se2 = "&cb=callback"
+var nub = [0,0];
 $(document).ready(function (){
     var seeked = document.getElementById("searchbtn");
     seeked.onclick = function () {
@@ -18,7 +20,8 @@ $(document).ready(function (){
     var txt  = document.getElementById("searchtype");
     txt.focus();
 
-
+    txt.addEventListener("input",addRecommend);
+    txt.addEventListener("keydown",checkRecommend);
 })
 
 
@@ -55,6 +58,66 @@ function searchtoolListener(newbtn, sitelink){
         SE = sitelink.toString();
         console.log(SE);
         closeusesearchbar();
+    })
+}
+
+
+function yesRecommendArea(){
+        document.getElementById("recommendBar").classList.remove("vanish");
+}
+function noRecommendArea(){
+    document.getElementById("recommendBar").classList.add("vanish");
+}
+function checkRecommend(){
+    if(document.getElementById("searchtype").value.length === 0){
+        noRecommendArea();
+        nub = [nub[1], 0];
+    }
+}
+
+
+function addRecommend(){
+    var val = document.getElementById("searchtype").value;
+    if (val.length !== 0){
+        var oRec = document.getElementById("recommendKits");
+        oRec.innerHTML = "";
+        var oScript = document.createElement("script");//动态创建script标签
+        oScript.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=callback";
+        //添加链接及回调函数
+        document.body.appendChild(oScript);//添加script标签
+        document.body.removeChild(oScript);//删除script标签
+    }else  {
+        noRecommendArea();
+        nub = [nub[1], 0];
+    }
+
+}
+//回调函数
+function callback(data){
+    if (data.s.length > 10) {
+        var lis =[data.s[0], data.s[1], data.s[2], data.s[3], data.s[4], data.s[5], data.s[6], data.s[7], data.s[8], data.s[9], data.s[10], data.s[11]];
+        nub = [nub[1], 1];
+    }
+    if (data.s.length === 0){
+        noRecommendArea();
+        nub = [nub[1], 0];
+        return;
+    }
+    else {
+        lis = data.s;
+        nub = [nub[1], 1];
+    }
+    if (nub[0] === 0 && nub[1] === 1){
+        yesRecommendArea(lis);
+    }
+    var oRec = document.getElementById("recommendKits");
+    lis.forEach(function(value){
+        var oBtn = document.createElement("div");
+        oBtn.setAttribute("class", "btn");
+        oBtn.style.margin = "6px";
+        oRec.appendChild(oBtn);
+        oBtn.innerHTML = value;
+        oBtn.onclick = function(){window.open(SE + value);}
     })
 }
 

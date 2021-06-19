@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-    addshadow(document.getElementById("linkarea"));
-    addshadow(document.getElementById("areasecond"));
-    addshadow(document.getElementById("areathird"));
-    addshadow(document.getElementById("signInBar"));
+    for (var i = 0; i < document.getElementsByClassName("bar").length; i++) {
+        addshadow(document.getElementsByClassName("bar")[i])
+    }
+
     var txt  = document.getElementById("searchtype");
     txt.onmouseover = function () {
         txt.focus();

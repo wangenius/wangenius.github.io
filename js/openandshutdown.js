@@ -21,6 +21,7 @@ $(document).ready(function () {
     var closeSignBtn = document.getElementById("closesignbtn");
     closeSignBtn.addEventListener("click", closeSignInBar);
 
+
 })
 
 function usesearchbar(){
