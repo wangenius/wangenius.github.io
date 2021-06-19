@@ -89,7 +89,7 @@ function addLinks(e) {
 function addALink(name, link) {
     var linkarea = document.getElementById("linkarea");
     var newbtn = document.createElement("div");
-    newbtn.setAttribute("class", 'btn');
+    newbtn.setAttribute("class", 'btn alignbtn');
     newbtn.innerText = name;
     newbtn.setAttribute("id", name);
     linkarea.appendChild(newbtn);

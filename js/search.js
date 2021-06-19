@@ -20,8 +20,7 @@ $(document).ready(function (){
     var txt  = document.getElementById("searchtype");
     txt.focus();
 
-    txt.addEventListener("input",addRecommend);
-    txt.addEventListener("keydown",checkRecommend);
+    txt.addEventListener("keydown",addRecommend);
 })
 
 
@@ -46,7 +45,7 @@ function searchtooladd(){
 function addASearchLink(sitename, sitelink){
     var searchtoolarera = document.getElementById("searchtoolarera");
     var newbtn = document.createElement("div");
-    newbtn.setAttribute("class", 'btn searchtoolbtn');
+    newbtn.setAttribute("class", 'btn searchtoolbtn alignbtn');
     newbtn.innerText = sitename;
     newbtn.setAttribute("id", name);
     searchtoolarera.appendChild(newbtn);
@@ -72,12 +71,16 @@ function checkRecommend(){
     if(document.getElementById("searchtype").value.length === 0){
         noRecommendArea();
         nub = [nub[1], 0];
+    }else{
+        yesRecommendArea();
     }
+
 }
 
 
 function addRecommend(){
     var val = document.getElementById("searchtype").value;
+    console.log(val);
     if (val.length !== 0){
         var oRec = document.getElementById("recommendKits");
         oRec.innerHTML = "";
@@ -107,15 +110,17 @@ function callback(data){
         lis = data.s;
         nub = [nub[1], 1];
     }
+    checkRecommend();
     if (nub[0] === 0 && nub[1] === 1){
         yesRecommendArea(lis);
     }
     var oRec = document.getElementById("recommendKits");
     lis.forEach(function(value){
         var oBtn = document.createElement("div");
-        oBtn.setAttribute("class", "btn");
-        oBtn.style.margin = "6px";
+        oBtn.setAttribute("class", "btn alignbtn");
+        oBtn.style.margin = "5px";
         oRec.appendChild(oBtn);
+        console.log(value);
         oBtn.innerHTML = value;
         oBtn.onclick = function(){window.open(SE + value);}
     })

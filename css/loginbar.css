@@ -1,7 +1,11 @@
 .logbtn {
+
     cursor: pointer;
+    line-height: 35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     margin: 10px 5px;
-    display: inline-block;
 }
 .logtype {
     flex: 1;
@@ -29,5 +33,15 @@
 
 #closesignbtn {
     margin-right: 15px;
+    padding: 0;
     width: 35px;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+    display:flex;align-items:center;justify-content:center;
+    transition: 0.5s;
+}
+#closesignbtn:hover {
+    transform:rotate(180deg);
+    transition: 0.5s;
 }
