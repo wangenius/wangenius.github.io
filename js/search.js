@@ -20,7 +20,8 @@ $(document).ready(function (){
     var txt  = document.getElementById("searchtype");
     txt.focus();
 
-    txt.addEventListener("keydown",addRecommend);
+    txt.addEventListener("keyup",checkRecommend);
+
 })
 
 
@@ -72,16 +73,15 @@ function checkRecommend(){
         noRecommendArea();
         nub = [nub[1], 0];
     }else{
-        yesRecommendArea();
+        addRecommend();
     }
-
 }
 
 
 function addRecommend(){
     var val = document.getElementById("searchtype").value;
     console.log(val);
-    if (val.length !== 0){
+
         var oRec = document.getElementById("recommendKits");
         oRec.innerHTML = "";
         var oScript = document.createElement("script");//动态创建script标签
@@ -89,10 +89,7 @@ function addRecommend(){
         //添加链接及回调函数
         document.body.appendChild(oScript);//添加script标签
         document.body.removeChild(oScript);//删除script标签
-    }else  {
-        noRecommendArea();
-        nub = [nub[1], 0];
-    }
+
 
 }
 //回调函数
@@ -110,7 +107,7 @@ function callback(data){
         lis = data.s;
         nub = [nub[1], 1];
     }
-    checkRecommend();
+
     if (nub[0] === 0 && nub[1] === 1){
         yesRecommendArea(lis);
     }
@@ -118,7 +115,7 @@ function callback(data){
     lis.forEach(function(value){
         var oBtn = document.createElement("div");
         oBtn.setAttribute("class", "btn alignbtn");
-        oBtn.style.margin = "5px";
+        oBtn.style.margin = "10px 5px 0 5px";
         oRec.appendChild(oBtn);
         console.log(value);
         oBtn.innerHTML = value;
